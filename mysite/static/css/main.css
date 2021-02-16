@@ -1,0 +1,32 @@
+body
+{ font: normal 80% Arial, Helvetica, sans-serif;
+  color: #FFF;
+  background:transparent url(bg.jpg);
+}
+
+.bg-light {
+    background-color: #bb3a3a !important;
+}
+
+.navbar-light .navbar-nav .active > .nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show > .nav-link {
+    color: rgba(245, 242, 242, 0.9);
+}
+
+header{
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 90px;
+}
+
+#content{
+  border-radius: 0px 0px 15px 15px;
+  float: left;
+  background: transparent url(transparent.png) repeat;
+}
+  
+.content_item{ 
+  margin-top: 20px;
+  padding: 5px;
+  font-family:Georgia, "Times New Roman", Times, serif;
+  font-size:16px;
+  margin-bottom: 20px;
+}
+  
