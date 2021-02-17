@@ -1,7 +1,7 @@
 {% extends 'finder/base.html' %}
 {% load static %}
 {% load crispy_forms_tags %}
-{% block title %}Register{% endblock %}
+{% block title %}Login{% endblock %}
 
 {% block content %}
 <div class="col-md-4 col-sm-4 offset-md-4">
@@ -10,7 +10,7 @@
         {% csrf_token %}
         {{ form|crispy }}
         <div class="text-center">
-			  <button type="submit" class="btn btn-sm btn-outline-danger mt-2">SignUp</button>
+			  <button type="submit" class="btn btn-sm btn-outline-danger mt-2">Signin</button>
         </div>
     </form>
 </div>
