@@ -1,0 +1,58 @@
+{% extends 'finder/base.html' %}
+{% load static %}
+{% block title %}Search Blood{% endblock %}
+
+{% block content %}
+
+<br>
+	 <hr>
+	   <div class="col-md-5 col-sm-3 offset-md-4 ">
+		<form method="POST">
+			{% csrf_token %}
+		  <div class="form-row align-items-center">
+			<div class="col-auto my-1">
+			  <label class="mr-sm-2" for="inlineFormCustomSelect">Search By Group</label>
+			  <select class="custom-select mr-sm-2" name="group" id="inlineFormCustomSelect">
+				<option selected>Choose...</option>
+				<option value="A+">A+</option>
+				<option value="A-">A-</option>
+				<option value="AB+">AB+</option>
+				<option value="AB-">AB-</option>
+				<option value="B+">B+</option>
+				<option value="B-">B-</option>
+				<option value="O+">O+</option>
+				<option value="O-">O-</option>
+			  </select>
+			</div>
+			<div class="col-auto my-1">
+			  <button type="submit" class="btn btn-sm btn-outline-danger mt-4">Search</button>
+			</div>
+		  </div>
+		</form>
+	   </div>
+	   <hr>
+       {% if results %}
+		<table class="table ">
+		  <thead>
+			<tr class="bg-danger">
+			  <th>Full name</th>
+			  <th>Blood Group</th>
+			  <th>Location</th>
+			  <th>Contact No</th>
+			</tr>
+		  </thead>
+		  <tbody>
+		   {% for res in results %}
+			<tr class="bg-danger">
+			  <td>{{ res.full_name }}</td>
+			  <td>{{ res.blood_group }}</td>
+			  <td>{{ res.Location }}</td>
+			  <td>{{ res.contact_no }}</td>
+			</tr>
+		   {% endfor %}
+		  </tbody>
+		</table>
+	   <hr>
+       {% endif %}
+
+{% endblock %}

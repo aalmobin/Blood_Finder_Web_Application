@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from .forms import DonerRegister, ProfileUpdate
 from django.contrib import messages
+from .models import Profile
 from django.contrib.auth.decorators import login_required
 
 
@@ -42,3 +43,14 @@ def updateprofile(request):
         'p_form': p_form,
     }
     return render(request, 'finder/update_profile.html', context)
+
+
+def search(request):
+    if request.method == 'POST':
+        group = request.POST['group']
+        results = Profile.objects.filter(blood_group__icontains=group)
+        context = {
+            'results': results
+        }
+        return render(request, 'finder/search_blood.html', context)
+    return render(request, 'finder/search_blood.html')
