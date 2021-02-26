@@ -44,7 +44,7 @@
 		  <tbody>
 		   {% for res in results %}
 			<tr class="bg-danger">
-			  <td>{{ res.full_name }}</td>
+			  <td><a class="btn btn-sm btn-danger" href="{% url 'doner-info' res.id %}">{{ res.full_name }}</a></td>
 			  <td>{{ res.blood_group }}</td>
 			  <td>{{ res.Location }}</td>
 			  <td>{{ res.contact_no }}</td>

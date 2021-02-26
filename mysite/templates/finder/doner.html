@@ -1,0 +1,40 @@
+{% extends 'finder/base.html' %}
+{% load static %}
+{% block title %}Doner Details{% endblock %}
+
+{% block content %}
+<br>
+<hr>
+<div class="text-center">
+    <img class="img-fluid img-thumbnail" src="{{ doner.img.url }}" alt="Responsive image">
+</div>
+
+<hr>
+<div class="text-center col-md-4 offset-md-4">
+<table class="table">
+    <tr class="bg-danger text-center">
+      <td>Full Name : {{ doner.full_name }}</td>
+    </tr>
+    <tr class="bg-danger text-center">
+      <td>Blood Group : {{ doner.blood_group }}</td>
+    </tr>
+    <tr class="bg-danger text-center">
+      <td>Gender : {{ doner.gender }}</td>
+    </tr>
+    <tr class="bg-danger text-center">
+      <td>Location : {{ doner.Location }}</td>
+    </tr>
+    <tr class="bg-danger text-center">
+      <td>Birth Date : {{ doner.birthdate }}</td>
+    </tr>
+    <tr class="bg-danger text-center">
+      <td>Contact No : {{ doner.contact_no }}</td>
+    </tr>
+    <tr class="bg-danger text-center">
+      <td>Availability : {{ doner.availability }}</td>
+    </tr>
+</table>
+</div>
+<hr>
+
+{% endblock %}

@@ -54,3 +54,12 @@ def search(request):
         }
         return render(request, 'finder/search_blood.html', context)
     return render(request, 'finder/search_blood.html')
+
+
+def donerInfo(request, pk):
+    doner = Profile.objects.get(id=pk)
+
+    context = {
+        'doner': doner
+    }
+    return render(request, 'finder/doner.html', context)
