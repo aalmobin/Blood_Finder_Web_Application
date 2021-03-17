@@ -11,7 +11,8 @@ class Profile(models.Model):
         ('AB+', 'AB+'),
         ('AB-', 'AB-'),
         ('B-', 'B-'),
-        ('O+', 'O-'),
+        ('O+', 'O+'),
+        ('O-', 'O-'),
     ]
     GENDER = [
         ('Male', 'Male'),
